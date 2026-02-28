@@ -29,7 +29,7 @@ export default function HomePage() {
 
         <section id="experiences" className="py-20 container mx-auto px-4 max-w-6xl">
           <h2 className="text-3xl font-bold mb-10 tracking-tight border-l-4 border-primary pl-4">
-            Work Experiences
+            Work <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-emerald-500 font-extrabold">Experiences</span>
           </h2>
           <div className="flex flex-col gap-8">
             {experiences.map((exp, index) => (
@@ -45,7 +45,7 @@ export default function HomePage() {
         <section id="project" className="py-20 bg-muted/20">
           <div className="container mx-auto px-4 max-w-6xl">
             <h2 className="text-3xl font-bold mb-10 tracking-tight border-l-4 border-primary pl-4">
-              Featured Projects
+              Featured <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-emerald-500 font-extrabold">Projects</span>
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {projects.map((project, index) => (
