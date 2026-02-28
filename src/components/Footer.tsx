@@ -22,10 +22,7 @@ export default function Footer() {
   return (
     <footer className="w-full bg-background border-t pt-16 pb-8 transition-colors duration-500">
       <div className="container mx-auto px-4">
-        {/* Top Section */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
-          
-          {/* Brand/About Column */}
           <div className="space-y-4">
             <h3 className="text-2xl font-bold tracking-tighter">
               Yudha <span className="text-primary">Sanggrama</span>
@@ -47,8 +44,6 @@ export default function Footer() {
               ))}
             </div>
           </div>
-
-          {/* Quick Links Column */}
           <div className="space-y-4">
             <h4 className="font-bold text-sm uppercase tracking-widest">Quick Links</h4>
             <ul className="space-y-2">
@@ -65,8 +60,6 @@ export default function Footer() {
               ))}
             </ul>
           </div>
-
-          {/* Get In Touch Column */}
           <div className="space-y-4">
             <h4 className="font-bold text-sm uppercase tracking-widest">Get In Touch</h4>
             <div className="space-y-3">
@@ -102,8 +95,6 @@ export default function Footer() {
             </div>
           </div>
         </div>
-
-        {/* Bottom Section */}
         <div className="pt-8 border-t flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-xs text-muted-foreground">
             © {currentYear} Yudha Sanggrama. All rights reserved.

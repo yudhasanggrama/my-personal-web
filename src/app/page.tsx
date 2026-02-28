@@ -27,7 +27,6 @@ export default function HomePage() {
           <TechStack />
         </section>
 
-        {/* Experience Section */}
         <section id="experiences" className="py-20 container mx-auto px-4 max-w-6xl">
           <h2 className="text-3xl font-bold mb-10 tracking-tight border-l-4 border-primary pl-4">
             Work Experiences
@@ -43,7 +42,6 @@ export default function HomePage() {
           <EducationSection educationData={educationData} />
         </section>
 
-        {/* Projects Section */}
         <section id="project" className="py-20 bg-muted/20">
           <div className="container mx-auto px-4 max-w-6xl">
             <h2 className="text-3xl font-bold mb-10 tracking-tight border-l-4 border-primary pl-4">
@@ -57,10 +55,8 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Contact Section */}
         <section id="contact" className="py-24 bg-background transition-colors duration-500">
           <div className="container mx-auto px-4 max-w-5xl">
-            {/* Header Section */}
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-4 tracking-tight">
                 Let's <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-emerald-500 font-extrabold">Connect</span>
@@ -69,11 +65,7 @@ export default function HomePage() {
                 Feel free to reach out for collaborations, mentoring, or just a friendly chat
               </p>
             </div>
-
-            {/* Grid Cards - Elegant Indigo & Emerald Theme */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-              
-              {/* Email Card - Link to Mailto */}
               <a 
                 href="mailto:yudhasanggrama@gmail.com"
                 className="p-[1px] rounded-2xl bg-gradient-to-r from-indigo-500/20 to-indigo-500/10 transition-all hover:from-indigo-500/40 hover:to-indigo-500/20 hover:scale-[1.01] active:scale-[0.99] group"
@@ -88,8 +80,6 @@ export default function HomePage() {
                   </div>
                 </div>
               </a>
-
-              {/* LinkedIn Card - Link to LinkedIn Profile */}
               <a 
                 href="https://linkedin.com/in/yudhasanggrama" 
                 target="_blank" 
@@ -106,8 +96,6 @@ export default function HomePage() {
                   </div>
                 </div>
               </a>
-
-              {/* GitHub Card - Link to GitHub Profile */}
               <a 
                 href="https://github.com/yudhasanggrama" 
                 target="_blank" 
@@ -124,8 +112,6 @@ export default function HomePage() {
                   </div>
                 </div>
               </a>
-
-              {/* Availability Card - Non-clickable (Status Only) */}
               <div className="p-[1px] rounded-2xl bg-gradient-to-r from-emerald-500/20 to-emerald-500/10">
                 <div className="bg-card p-5 rounded-[15px] flex items-center gap-4 h-full">
                   <div className="p-3 bg-emerald-500/10 rounded-xl">
@@ -141,8 +127,6 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
-
-            {/* Big CTA Card tetap sama ... */}
           </div>
         </section>
 

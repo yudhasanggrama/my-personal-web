@@ -8,7 +8,6 @@ import { Button } from "@/components/ui/button";
 export default function Hero() {
   return (
     <section className="relative w-full py-20 lg:py-32 overflow-hidden">
-      {/* Background Decor (Opsional: Efek cahaya di belakang) */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10 opacity-20 pointer-events-none">
         <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-primary rounded-full blur-[120px]" />
         <div className="absolute bottom-[-10%] right-[-10%] w-[30%] h-[30%] bg-blue-500 rounded-full blur-[100px]" />
@@ -16,8 +15,6 @@ export default function Hero() {
 
       <div className="container mx-auto px-4">
         <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-12">
-          
-          {/* Text Content */}
           <motion.div 
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -55,8 +52,6 @@ export default function Hero() {
               </Button>
             </div>
           </motion.div>
-
-          {/* Image Profile */}
           <motion.div 
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -64,11 +59,8 @@ export default function Hero() {
             className="relative"
           >
             <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
-              {/* Frame Aksen */}
               <div className="absolute inset-0 border-2 border-primary rounded-[2rem] rotate-6 scale-105 opacity-20" />
               <div className="absolute inset-0 border-2 border-primary/50 rounded-[2rem] -rotate-3 scale-100" />
-              
-              {/* Profile Image */}
               <div className="relative w-full h-full rounded-[2rem] overflow-hidden border-4 border-background shadow-2xl">
                 <Image
                   src="/img/profile.jpg"

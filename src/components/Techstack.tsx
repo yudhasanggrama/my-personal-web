@@ -52,7 +52,7 @@ export default function TechStack() {
                   width={50} 
                   height={50} 
                   className="object-contain"
-                  unoptimized // Ditambahkan agar SVG dari CDN lebih cepat dirender
+                  unoptimized 
                 />
               </div>
               <span className="text-xs font-semibold tracking-wider text-muted-foreground uppercase">{tech.name}</span>

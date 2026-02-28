@@ -21,8 +21,6 @@ export default function Navbar() {
         <Link href="/">
           <Image src="/img/ysw_logo.jpg" alt="Logo" width={100} height={40} className="rounded" />
         </Link>
-
-        {/* Desktop */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <Link key={link.name} href={link.href} className="text-sm font-medium hover:text-primary transition-colors">
@@ -36,8 +34,6 @@ export default function Navbar() {
             </Button>
           </div>
         </div>
-
-        {/* Mobile */}
         <div className="md:hidden flex items-center gap-3">
           <ThemeToggle />
           <Sheet>

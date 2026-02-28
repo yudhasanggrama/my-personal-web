@@ -12,7 +12,7 @@ interface ProjectProps {
   tech: string[];
   repoPrivate: string | boolean;
   demo: string | boolean;
-  index?: number; // Tambahkan index untuk stagger animation
+  index?: number;
 }
 
 export default function ProjectCard({ image, title, description, tech, repoPrivate, demo, index = 0 }: ProjectProps) {
@@ -24,7 +24,6 @@ export default function ProjectCard({ image, title, description, tech, repoPriva
       transition={{ duration: 0.5, delay: index * 0.1 }}
       className="group relative flex flex-col h-full rounded-3xl bg-card border border-border/50 overflow-hidden transition-all duration-500 hover:border-primary/30 hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] dark:hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.3)]"
     >
-      {/* Image Section dengan Overlay */}
       <div className="relative h-52 w-full overflow-hidden">
         <Image
           src={image}
@@ -32,7 +31,6 @@ export default function ProjectCard({ image, title, description, tech, repoPriva
           fill
           className="object-cover transition-transform duration-700 group-hover:scale-110 group-hover:rotate-1"
         />
-        {/* Hover Overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center gap-4">
           {typeof demo === "string" && (
             <a
@@ -56,8 +54,6 @@ export default function ProjectCard({ image, title, description, tech, repoPriva
           )}
         </div>
       </div>
-
-      {/* Content Section */}
       <div className="p-6 flex flex-col flex-grow bg-gradient-to-b from-transparent to-muted/5">
         <div className="flex justify-between items-start mb-3">
           <h4 className="text-xl font-bold tracking-tight group-hover:text-primary transition-colors">
@@ -69,8 +65,6 @@ export default function ProjectCard({ image, title, description, tech, repoPriva
         <p className="text-muted-foreground text-sm line-clamp-3 mb-6 leading-relaxed">
           {description || "A showcase of my technical expertise and creative problem-solving skills."}
         </p>
-
-        {/* Tech Stack dengan Badge Animasi */}
         <div className="flex flex-wrap gap-2 mb-8">
           {tech.map((t) => (
             <Badge 
@@ -82,8 +76,6 @@ export default function ProjectCard({ image, title, description, tech, repoPriva
             </Badge>
           ))}
         </div>
-
-        {/* Footer Links */}
         <div className="flex gap-6 items-center pt-4 border-t border-border/50 mt-auto">
           {typeof repoPrivate === "string" ? (
             <a
