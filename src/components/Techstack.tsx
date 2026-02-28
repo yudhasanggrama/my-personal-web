@@ -22,9 +22,9 @@ export default function TechStack() {
 
   return (
     <div className="w-full overflow-hidden py-10 bg-background/50">
-      <h3 className="text-2xl font-bold mb-10 text-center tracking-tight text-foreground">
-        Tech Stack <span className="text-primary">—</span> Tools I Use Everyday
-      </h3>
+      <h2 className="text-4xl font-bold mb-10 text-center tracking-tight text-foreground">
+        Tech <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-emerald-500 font-extrabold">Stack</span>
+      </h2>
       
       <div 
         className="relative flex overflow-hidden group"
