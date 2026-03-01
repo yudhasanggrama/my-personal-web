@@ -100,8 +100,7 @@ export default function Footer() {
             © {currentYear} Yudha Sanggrama. All rights reserved.
           </p>
           <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
-            Built with 
-            <Heart className="w-3 h-3 text-red-500 fill-red-500 animate-pulse" /> 
+            Built  
             using <span className="font-semibold text-foreground">Next.js</span> & 
             <span className="font-semibold text-foreground">TailwindCSS</span>
           </div>
