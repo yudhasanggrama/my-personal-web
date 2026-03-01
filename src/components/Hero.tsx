@@ -33,15 +33,7 @@ export default function Hero() {
               initial planning to final production.
             </p>
 
-            <div className="flex flex-wrap justify-center md:justify-start gap-4 mt-8">
-              <Button 
-                size="lg" 
-                className="rounded-full gap-2 px-8 h-12 text-base shadow-lg hover:shadow-primary/20 transition-all"
-                onClick={() => window.location.href = 'https://wa.me/6281380401393'}
-              >
-                <MessageCircle className="w-5 h-5" /> Let&apos;s Talk
-              </Button>
-              
+            <div className="flex flex-wrap justify-center md:justify-start gap-4 mt-8">        
               <Button 
                 variant="outline" 
                 size="lg" 
