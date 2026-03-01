@@ -27,12 +27,24 @@ export const getProjects = () => {
         description:
             "LapyyGo is a feature-rich laptop mini-store built using Next.js 16 and Supabase. It features Midtrans payment integration, real-time stock/order updates, and a comprehensive Admin Dashboard. The project demonstrates a complete e-commerce lifecycle, from secure user authentication to automated email reporting and automated payment webhooks.",
         image: "/img/project/lappygo.jpg",
-        tech: ["Next.js", "Supabase", "Javascript", "Tailwind", "Typescript"],
+        tech: ["Next.js", "Supabase", "Javascript", "Tailwind", "Typescript", "Shadcn UI"],
         repoPrivate: "https://github.com/yudhasanggrama/lappygo-store",
         demo: "https://lappygo-store.vercel.app/",
         },
+
         {
         id: 4,
+        title: "SimpleResu",
+        description:
+            "SimpleResu is a collaborative web application project developed together with my colleague. It is a web application that allows users to build, customize, and preview their professional CV in real-time. In this project, I was responsible for building and managing the backend system, including database design, authentication flow, and API integration using Next.js and Supabase, while my colleague focused on crafting the frontend interface to ensure a responsive and user-friendly experience using Tailwind CSS and TypeScript.",
+        image: "/img/project/lappygo.jpg",
+        tech: ["Next.js", "Supabase", "Javascript", "Tailwind CSS", "Typescript", "Express js", "Prisma", "PostgreSQL"],
+        repoPrivate: false,
+        demo: "https://simpleresu.netlify.app/",
+        },
+
+        {
+        id: 5,
         title: "PKA System",
         description:
             "PKA System is a digital solution for finding trusted workers, including house assistants, nannies/babysitters, and drivers. With a modern interface and well-organized categories, users can quickly and securely choose workers based on their needs.",
@@ -43,7 +55,7 @@ export const getProjects = () => {
         },
 
         {
-        id: 5,
+        id: 6,
         title: "SarangTomket23 System",
         description:
             "SarangTomket23 System is an internal web application built for a garment manufacturing company to handle order management, including order processing, production requirements, and status order",
