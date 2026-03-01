@@ -37,7 +37,7 @@ export const getProjects = () => {
         title: "SimpleResu",
         description:
             "SimpleResu is a collaborative web application project developed together with my colleague. It is a web application that allows users to build, customize, and preview their professional CV in real-time. In this project, I was responsible for building and managing the backend system, including database design, authentication flow, and API integration using Next.js and Supabase, while my colleague focused on crafting the frontend interface to ensure a responsive and user-friendly experience using Tailwind CSS and TypeScript.",
-        image: "/img/project/lappygo.jpg",
+        image: "/img/project/simpleresu.png",
         tech: ["Next.js", "Supabase", "Javascript", "Tailwind CSS", "Typescript", "Express js", "Prisma", "PostgreSQL"],
         repoPrivate: false,
         demo: "https://simpleresu.netlify.app/",
