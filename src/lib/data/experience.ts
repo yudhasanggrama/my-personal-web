@@ -2,6 +2,20 @@ export const getExperiences = () => {
         return  [
         {
             id:1,
+            image: "/img/experience/brand.svg",
+            title: "Full Stack Developer - Internship",
+            company: "PT Dumbways Teknologi Indonesia",
+            date: "February 2026 – March 2026",
+            tasks: [
+                "Built scalable web applications using Laravel, Next.js, and Express.js, improving system performance and maintainability",
+                "Integrated Midtrans payment gateway to enable secure and seamless online transactions",
+                "Implemented AI-powered features using Gemini AI to automate data processing and improve efficiency",
+                "Deployed applications using CI/CD pipelines with GitHub Actions, reducing manual deployment effort"
+            ],
+            techStack: ["PHP", "TypeScript", "React.js", "Next.js", "Express.js", "Node.js", "Laravel", "JavaScript", "Tailwind CSS", "shadcn/ui", "Supabase", "PostgreSQL", "MySQL"],
+        },
+        {
+            id:2,
             image: "/img/experience/pka.jpg",
             title: "Web Developer - Freelance",
             company: "Pancaran Kasih Abadi",
@@ -14,7 +28,7 @@ export const getExperiences = () => {
             techStack: ["PHP", "MySQL", "Javascript"],
         },
         {
-            id:2,
+            id:3,
             image: "/img/experience/haltev.webp",
             title: "Asisten Instruktur Haltev di PT Siemens - Volunteer",
             company: "Haltev IT Learning Center",
@@ -28,7 +42,7 @@ export const getExperiences = () => {
             techStack: ["PHP", "MySQL", "Javascript", "Bootstrap"],
         },
         {
-            id:3,
+            id:4,
             image: "/img/experience/sarang_tomket.png",
             title: "Web Developer (Academic Research)",
             company: "SARANG TOMKET 23 (KONVEKSI SUBLIME PRINTING)",
