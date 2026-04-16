@@ -1,97 +1,137 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mail, Linkedin, Github, Clock, ArrowUpRight } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
+import { Mail, Linkedin, Github, MessageCircle, ArrowUpRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
+const contacts = [
+  {
+    label: "Email",
+    value: "yudhasanggrama@gmail.com",
+    href: "mailto:yudhasanggrama@gmail.com",
+    icon: Mail,
+  },
+  {
+    label: "LinkedIn",
+    value: "/in/yudhasanggrama",
+    href: "https://linkedin.com/in/yudhasanggrama",
+    icon: Linkedin,
+  },
+  {
+    label: "GitHub",
+    value: "@yudhasanggrama",
+    href: "https://github.com/yudhasanggrama",
+    icon: Github,
+  },
+];
 
 export default function ContactSection() {
-    const contactLinks = [
-        {
-        label: "Email me at",
-        value: "yudhasanggrama@gmail.com",
-        href: "mailto:yudhasanggrama@gmail.com",
-        icon: Mail,
-        },
-        {
-        label: "Connect on",
-        value: "LinkedIn",
-        href: "https://linkedin.com/in/yudhasanggrama",
-        icon: Linkedin,
-        },
-        {
-        label: "Check out my code on",
-        value: "GitHub",
-        href: "https://github.com/yudhasanggrama",
-        icon: Github,
-        },
-    ];
+  return (
+    <div className="container mx-auto px-4 max-w-4xl relative z-10 text-center">
 
-    return (
-        <>
-        <div className="container mx-auto px-4 max-w-5xl relative z-10">
-            <div className="text-center mb-16">
-            <motion.h2 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="text-4xl md:text-5xl font-bold mb-4 tracking-tight"
-            >
-                Let's <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-emerald-500 font-extrabold">Connect</span>
-            </motion.h2>
-            <motion.p 
-                className="text-muted-foreground max-w-2xl mx-auto text-sm md:text-base"
-            >
-                Feel free to reach out for collaborations or just a friendly chat.
-            </motion.p>
+      {/* Section tag */}
+      <motion.p
+        initial={{ opacity: 0, y: -10 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="text-[11px] font-bold uppercase tracking-[0.3em] text-muted-foreground mb-4"
+      >
+        05 / Contact
+      </motion.p>
+
+      {/* Main headline */}
+      <motion.h2
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.1 }}
+        className="text-4xl md:text-6xl font-extrabold tracking-tight mb-5 leading-tight"
+      >
+        Let&apos;s Build Something{" "}
+        <span className="animated-gradient-text">Great</span>{" "}
+        Together
+      </motion.h2>
+
+      <motion.p
+        initial={{ opacity: 0, y: 10 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.2 }}
+        className="text-muted-foreground text-base md:text-lg max-w-xl mx-auto mb-10 leading-relaxed"
+      >
+        Open to new opportunities, freelance projects, and collaborations.
+        Feel free to reach out — I&apos;d love to connect!
+      </motion.p>
+
+      {/* Primary CTA */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.92 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.3 }}
+        className="mb-12"
+      >
+        <Button
+          size="lg"
+          className="rounded-full gap-2 px-10 h-14 text-base shadow-2xl shadow-primary/20 hover:shadow-primary/40 transition-all"
+          onClick={() => window.open("https://wa.me/6281380401393", "_blank")}
+        >
+          <MessageCircle className="w-5 h-5" />
+          Let&apos;s Talk on WhatsApp
+          <ArrowUpRight className="w-4 h-4" />
+        </Button>
+      </motion.div>
+
+      {/* Divider */}
+      <div className="flex items-center gap-4 mb-8 max-w-xs mx-auto">
+        <div className="flex-1 h-px bg-border" />
+        <span className="text-[10px] text-muted-foreground uppercase tracking-widest whitespace-nowrap">
+          or reach me on
+        </span>
+        <div className="flex-1 h-px bg-border" />
+      </div>
+
+      {/* Contact cards */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.4 }}
+        className="flex flex-col sm:flex-row justify-center gap-3 mb-12"
+      >
+        {contacts.map((c) => (
+          <a
+            key={c.label}
+            href={c.href}
+            target={c.icon !== Mail ? "_blank" : undefined}
+            rel={c.icon !== Mail ? "noopener noreferrer" : undefined}
+            className="group flex items-center gap-3 px-5 py-3.5 rounded-2xl border border-border/60 bg-card/50 hover:border-primary/40 hover:bg-primary/5 transition-all duration-300 text-left"
+          >
+            <div className="p-2 rounded-xl bg-primary/10 group-hover:bg-primary/20 transition-colors shrink-0">
+              <c.icon className="w-4 h-4 text-primary" />
             </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {contactLinks.map((link, index) => (
-                <motion.a
-                key={index}
-                href={link.href}
-                target={link.icon !== Mail ? "_blank" : undefined}
-                rel={link.icon !== Mail ? "noopener noreferrer" : undefined}
-                className="group"
-                >
-                    <Card className="relative bg-card/40 border border-transparent group-hover:border-primary/30 shadow-sm overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-primary/5 hover:-translate-y-1">
-                        <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                            <CardContent className="p-5 flex items-center gap-4 relative z-10">
-                                <div className="p-3 bg-primary/10 rounded-xl group-hover:bg-primary/20 group-hover:text-primary transition-all duration-300 text-primary/80">
-                                    <link.icon className="w-5 h-5" />
-                                </div>
-                                <div className="overflow-hidden flex-1">
-                                    <p className="text-[10px] uppercase tracking-[0.15em] text-muted-foreground font-bold mb-0.5 group-hover:text-primary/70 transition-colors">
-                                    {link.label}
-                                    </p>
-                                    <p className="font-semibold text-sm md:text-base truncate group-hover:text-foreground transition-colors">
-                                    {link.value}
-                                    </p>
-                                </div>
-                                
-                                <ArrowUpRight className="w-4 h-4 text-muted-foreground/20 group-hover:text-primary/50 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
-                            </CardContent>
-                    </Card>
-                </motion.a>
-            ))}
-
-            {/* Status Card - Dibuat lebih matte/redup */}
-            <Card className="bg-card/40 border border-transparent shadow-sm">
-                <CardContent className="p-5 flex items-center gap-4">
-                <div className="p-3 bg-emerald-500/10 rounded-xl">
-                    <Clock className="w-5 h-5 text-emerald-500/80" />
-                </div>
-                <div>
-                    <p className="text-[10px] uppercase tracking-[0.15em] text-muted-foreground font-bold mb-0.5">Currently</p>
-                    <div className="flex items-center gap-2">
-                    <span className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse shadow-[0_0_8px_rgba(16,185,129,0.4)]" />
-                    <p className="font-semibold text-sm md:text-base text-foreground/90">Available for opportunities</p>
-                    </div>
-                </div>
-                </CardContent>
-            </Card>
+            <div className="min-w-0">
+              <p className="text-[10px] uppercase tracking-widest text-muted-foreground font-bold">
+                {c.label}
+              </p>
+              <p className="text-sm font-semibold truncate">{c.value}</p>
             </div>
-        </div>
-        </>
-    );
+            <ArrowUpRight className="w-4 h-4 text-muted-foreground/20 group-hover:text-primary/60 ml-auto shrink-0 transition-colors" />
+          </a>
+        ))}
+      </motion.div>
+
+      {/* Available status */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.5 }}
+        className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-emerald-500/30 bg-emerald-500/5 text-emerald-600 dark:text-emerald-400 text-sm font-semibold"
+      >
+        <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse shadow-[0_0_8px_rgba(16,185,129,0.5)]" />
+        Currently available for opportunities
+      </motion.div>
+    </div>
+  );
 }

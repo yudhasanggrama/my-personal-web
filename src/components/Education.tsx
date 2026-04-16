@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { GraduationCap, Calendar, CheckCircle2, School, BookOpen } from "lucide-react";
+import SectionHeader from "@/components/SectionHeader";
 import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
@@ -140,25 +141,13 @@ export default function EducationSection({ educationData }: { educationData: Edu
             </div>
 
             <div className="container mx-auto px-4 max-w-5xl relative z-10">
-                <div className="text-center mb-20">
-                    <motion.h2
-                        initial={{ opacity: 0, y: -20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="text-4xl md:text-5xl font-bold mb-4 tracking-tight"
-                    >
-                        Academic <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-emerald-500 font-extrabold">Background</span>
-                    </motion.h2>
-                    <motion.p
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.2 }}
-                        className="text-muted-foreground max-w-2xl mx-auto text-sm md:text-base leading-relaxed"
-                    >
-                        Membangun keahlian teknis melalui pendidikan formal dan proyek pengembangan sistem nyata yang berdampak.
-                    </motion.p>
-                </div>
+                <SectionHeader
+                    number="03"
+                    label="Academic"
+                    accent="Background"
+                    description="Building technical skills through formal education and real-world system development projects."
+                    align="center"
+                />
 
                 <div className="space-y-16">
                     {/* Formal Education */}

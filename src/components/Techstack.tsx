@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import SectionHeader from "@/components/SectionHeader";
 
 const technologies = [
   { name: "JavaScript", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
@@ -26,9 +27,15 @@ export default function TechStack() {
 
   return (
     <div className="w-full overflow-hidden py-10 bg-background/50">
-      <h2 className="text-4xl font-bold mb-10 text-center tracking-tight text-foreground">
-        Tech <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-emerald-500 font-extrabold">Stack</span>
-      </h2>
+      <div className="container mx-auto px-4">
+        <SectionHeader
+          number="01"
+          label="Tech"
+          accent="Stack"
+          description="Technologies I use to bring ideas to life — from frontend to backend and everything in between."
+          align="center"
+        />
+      </div>
       
       <div 
         className="relative flex overflow-hidden group"

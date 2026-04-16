@@ -1,11 +1,11 @@
 import Link from "next/link";
-import { Github, Linkedin, Mail, Heart, ExternalLink } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 
 const footerLinks = {
   quickLinks: [
     { name: "About Me", href: "#hero" },
     { name: "Tech Stack", href: "#tech-stack" },
-    { name: "Experience", href: "#experience" },
+    { name: "Experience", href: "#experiences" },
     { name: "Projects", href: "#project" },
     { name: "Contact", href: "#contact" },
   ],
@@ -100,8 +100,9 @@ export default function Footer() {
             © {currentYear} Yudha Sanggrama. All rights reserved.
           </p>
           <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
-            Built  
-            using <span className="font-semibold text-foreground">Next.js</span> & 
+            Built with{" "}
+            <span className="font-semibold text-foreground">Next.js</span>
+            {" & "}
             <span className="font-semibold text-foreground">TailwindCSS</span>
           </div>
         </div>

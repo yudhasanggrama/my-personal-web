@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import CustomCursor from "@/components/CustomCursor";
+import ScrollProgress from "@/components/ScrollProgress";
+import SectionNav from "@/components/SectionNav";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,8 +35,15 @@ export default function RootLayout({
           attribute="class"
           defaultTheme="system"
           enableSystem
-          disableTransitionOnChange={false} 
+          disableTransitionOnChange={false}
         >
+          {/* Global UI overlays */}
+          <ScrollProgress />
+          <CustomCursor />
+          <SectionNav />
+          {/* Film grain texture */}
+          <div className="grain-overlay" aria-hidden="true" />
+
           {children}
         </ThemeProvider>
       </body>
