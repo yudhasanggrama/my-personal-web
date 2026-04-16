@@ -93,7 +93,7 @@ export default function Hero() {
             <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-3 leading-tight">
               Hi, I&apos;m{" "}
               <span className="animated-gradient-text italic">
-                Yudha Sanggrama
+                Yudha Sanggrama Wijaya
               </span>{" "}
               👋
             </h1>

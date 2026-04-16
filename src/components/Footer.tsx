@@ -97,7 +97,7 @@ export default function Footer() {
         </div>
         <div className="pt-8 border-t flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-xs text-muted-foreground">
-            © {currentYear} Yudha Sanggrama. All rights reserved.
+            © {currentYear} Yudha Sanggrama Wijaya. All rights reserved.
           </p>
           <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
             Built with{" "}
