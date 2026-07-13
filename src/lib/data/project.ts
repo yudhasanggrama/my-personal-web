@@ -8,7 +8,7 @@ export const getProjects = () => {
         image: "/img/project/circleapp.jpg",
         tech: ["Express Js", "Prisma", "PostgreSQL", "React Js", "Typescript"],
         repoPrivate: "https://github.com/yudhasanggrama/social-app",
-        demo: "https://social-app-nu-pearl.vercel.app/",
+        demo: false,
         },
         {
         id: 2,
@@ -40,7 +40,7 @@ export const getProjects = () => {
         image: "/img/project/simpleresu.png",
         tech: ["Next.js", "Supabase", "Javascript", "Tailwind CSS", "Typescript", "Express js", "Prisma", "PostgreSQL"],
         repoPrivate: false,
-        demo: "https://simpleresu.netlify.app/",
+        demo: false,
         },
 
         {
